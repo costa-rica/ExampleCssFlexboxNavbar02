@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css"> 
+    <title>Document</title>
+</head>
+<body>
+
+        <section class="navbar_section">
+            <div class="navbar navbar-expand-lg navbar-light bg-light navbar_custom">
+                
+                <div class="nav_left">
+                    <a href="#" class="custom_link">
+                    <img id="km-logo" class="km-logo" src="images/designcrowd_logo_printready_cmyk.png" alt="KM logo">
+                    </a>
+                </div>
+
+                <div class="nav_middle">
+                        <h2>Username@someemailaddress.com</h2>
+                </div>
+
+                <!-- <div class="mobile_menu_div"> -->
+                    <img class="mobile-menu" id="mobile-cta" src="images/menu.svg" alt="Open Navigation">
+                <!-- </div> -->
+
+                <nav >
+                    <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Close Navigation">
+                    <ul >
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Service</a></li>
+                    </ul>
+                </nav>
+
+
+</div>
+</section>
+
+<script>
+    const mobileBtn = document.getElementById('mobile-cta')
+        nav = document.querySelector('nav')
+        mobileBtnExit = document.getElementById('mobile-exit');
+
+    mobileBtn.addEventListener('click', () => {
+        nav.classList.add('menu-btn');
+    })
+
+    mobileBtnExit.addEventListener('click', () => {
+        nav.classList.remove('menu-btn');
+    })
+</script>
+
+</body>
+</html>
+<!--
+//when object is declared flex all it's children are flex items
+//and only direct children.
+//width: min-content width of container longest single word, rows
+//width: max-content  no wrapping, single line
+//flex-shrink: 0;  not allowed to shrink just goes off page
+//flex-shrink: 1;  standard flexbox behavior
+//flex-basis: auto; standard flexbox behavior
+//flex-basis: 300px; each column 300px - think like width, but not exactly
+
+//flex-grow: 0;  standard flexbox behavior
+//flex-grow: 1;  if space to grow it will allow items to take up space
+//flex-wrap: wrap;  not default otherwise unnecssary.
+
+//flex: 1; all columns equal width
+//same as flex-grow:1;flex-shrink:1;flex-basis:0;
+
+flex-shink:0; flex-basis:100%; makes each child 100% width of parent (potentially goes off page)
+
+gap: 2rem; adds a gap or margin between children items
+
+//only on parent
+justify-content: ; only works with leftover space in the parent
+justify-content: space-between; puts children on each end and spaces each - very useful
+
+align-items: stretch; flex default 
+align-itmes: flex-start; squeshes items to their necessary/intrinsic size
+
+reference: https://www.youtube.com/watch?v=u044iM9xsWU
+
+-->

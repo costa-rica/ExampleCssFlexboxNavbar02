@@ -1,0 +1,173 @@
+@use 'custom';
+
+body{background-color: gray;}
+
+/*NavBar*/
+section.navbar_section {
+    .navbar_custom{
+        justify-content: flex-start;
+    
+        .nav_left{
+            padding-left: 15px;
+            // background-color: aquamarine;
+            img.km-logo {width: 120px;}
+        }
+
+        .nav_middle{
+            margin: 0 0 0 7%;
+            max-width:50%;
+            overflow-wrap: break-word;
+            h2{
+                font-size:15px;
+                // background-color: aquamarine;
+            }
+        }
+        nav.menu-btn{display:block;}
+        nav {display: none;}
+
+        // .mobile_menu_div{
+            // margin: auto;
+            .mobile-menu{
+                position: absolute;
+                cursor: pointer;
+                right:25px;
+                top: 30px;
+                height: 20%;
+                padding-left: 30px;
+                margin-left:50px;
+            }
+        // }
+
+        nav {
+            position: fixed;
+            z-index: 999;
+            width: 40%;
+            right: 0;
+            top: 0;
+            background: var(--bs-gray-500);
+            height: 100vh;
+            margin-left: 0;
+            ul {
+                list-style-type: none;
+                padding:50px 15px 0 0;
+                li{
+                    color: var(--bs-gray-100);
+                    font-size: 2em;
+                    a{
+                        text-decoration: none;
+                        display: block;
+                        padding: .5em 10px .5em 0;
+                        
+                        text-align: right;
+                        cursor: pointer;
+                        &:hover {font-weight: bold;}
+                    }    
+                }
+            }
+            .dropdown-menu{
+                background-color: var(--bs-gray-700);
+            }
+            .mobile-menu-exit{
+                float: right;
+                margin: .5em;
+                cursor: pointer;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 600px){
+    section.navbar_section {
+        .navbar_custom{
+            // justify-content: space-between;
+            .mobile-menu, .mobile-menu-exit{
+                display: none;
+            }
+            nav{
+                margin-right:0;
+                // margin-top:10px;
+                display: flex;
+                justify-content: flex-end;
+                background: none;
+                // position: unset;
+                height: auto;
+                
+                ul {
+                    display: flex;
+                    margin:0;
+                    padding: 1em 0 0 0;
+                    // justify-content: flex-end;
+                    li {
+                        height:55px;
+                        border:1px solid ;
+                        margin: 0; padding: 0;
+                        border-top-left-radius: 10px;
+                        background-color: var(--bs-primary);
+                        
+                        a {
+                            color: var(--bs-gray-100);
+                            
+                            font-size: .4em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 755px){
+    section.navbar_section {
+        .navbar_custom{
+            .nav_left{
+                margin-right:.1em;
+                img.km-logo {
+                    width: 150px;
+                }
+            }
+            .nav_middle{
+                h2 {
+                    font-size: 20px;
+                }
+            }
+            nav{
+                ul {
+                    li {
+                        height:69px;
+                        a {
+                            padding-bottom:5px;
+                            font-size: .75em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    section.navbar_section {
+        .navbar_custom{
+            // .nav_left{
+            //     margin-right:.1em;
+            //     img.km-logo {
+            //         width: 150px;
+            //     }
+            // }
+            .nav_middle{
+                h2 {
+                    font-size: 25px;
+                }
+            }
+            nav{
+                ul {
+                    li {
+                        height:69px;
+                        a {
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
